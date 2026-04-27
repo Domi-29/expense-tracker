@@ -1,0 +1,13 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "backend": "cd expense-tracker-backend && ./venv/bin/python -m uvicorn main:app --reload --port 8001",
+    "frontend": "cd expense-tracker-frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
